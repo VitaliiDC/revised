@@ -16,7 +16,7 @@ document.getElementById("fileInput").addEventListener("change", function (event)
 
         arr = arr.filter(e => e.innerText.includes("revised"))
         .map(e => e.innerText.match(regex));
-        arr = arr.map(e => e && e[0]).filter(e => e != null);
+        arr = arr.map(e => e && e[0].toUpperCase()).filter(e => e != null);
 
         let output = arr.join("</p><p>");
 
