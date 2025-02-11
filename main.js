@@ -14,7 +14,7 @@ document.getElementById("fileInput").addEventListener("change", function (event)
         let arr = doc.querySelectorAll(".text");
         arr = Array.from(arr);
 
-        arr = arr.filter(e => e.innerText.includes("revised"))
+        arr = arr.filter(e => e.innerText.toLowerCase().includes("revised"))
         .map(e => e.innerText.match(regex));
         arr = arr.map(e => e && e[0].toUpperCase()).filter(e => e != null);
 
